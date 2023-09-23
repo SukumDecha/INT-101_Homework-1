@@ -2,7 +2,7 @@ package work03;
 
 public class MyUtil {
     public static double calculateBMI(double height, double weight) {
-        return weight / (height * height);
+        return weight * 10_000 / (height * height);  
     }
 
     public static double average(int v1, int v2, int v3) {
