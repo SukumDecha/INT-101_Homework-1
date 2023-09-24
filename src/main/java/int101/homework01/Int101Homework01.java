@@ -24,7 +24,7 @@ public class Int101Homework01 {
        // remove () as many as possible from the following expression
        // but do not change the meaning of the expression; 
        // regardless of the values of the parameters: b1-b6 .
-       boolean b = b1 ^ b2 | b3 && b4 || b5 & b6;
+       boolean b = (b1 ^ (b2 | b3) && b4) || b5 & b6;
        System.out.println("Work01:Answer: b = " + b);
     }
     static void work02Question(int v1, int v2, int v3, int v4, int v5, int v6) {
@@ -36,7 +36,7 @@ public class Int101Homework01 {
        // remove () as many as possible from the following expression
        // but do not change the meaning of the expression; 
        // regardless of the values of the parameters: b1-b6 .
-       boolean b = v1 << v2 < v3 != v3 > (v4 ^ v5 | v6);
+       boolean b = (v1 << v2 < v3) != (v3 > (v4 ^ v5 | v6));
        System.out.println("Work02: Question: b = " + b);
     }
 
@@ -99,14 +99,22 @@ public class Int101Homework01 {
       */
        Person nine = new Person(123);
        Person karn = new Person(13);
+       System.out.println(nine);
        System.out.println(nine.getId());
+       System.out.println(karn);
+       System.out.println(karn.getId();
 
        BankAccount account = new BankAccount(nine.getId(), nine);
        BankAccount account1 = new BankAccount(karn.getId(), karn);
 
+       System.out.println(account); 
        System.out.println(account.getOwner());
        System.out.println(account.getBalance());
 
+       System.out.println(account1); 
+       System.out.println(account1.getOwner());
+       System.out.println(account1.getBalance());
+        
        account.deposit(1000);
        System.out.println(account.getBalance());
 
@@ -114,6 +122,7 @@ public class Int101Homework01 {
        System.out.println(account.getBalance());
 
        account.transfer(250, account1);
+       System.out.println(account.getBalance());
        System.out.println(account1.getBalance());
    }
 }
