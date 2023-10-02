@@ -1,4 +1,4 @@
-# INT-101_Homework-1
+# int101_2566
 
 - Student ID: 66130500038
 - Name: Teprawin Prueksachat
