@@ -54,8 +54,8 @@ public class Int101Homework01 {
       3.4 Show in this "work03UseOfUtilityClass" method how to use 
           "calculateBMI" and "average" methods of "MyUtil" class.
       */
-       System.out.println(MyUtil.average(10, 20, 30));
-       System.out.println(MyUtil.calculateBMI(1.78, 70));
+       System.out.println("Average of 10, 20, 30: " + MyUtil.average(10, 20, 30));
+       System.out.println("BMI of 178 cm and 70 kg: " + MyUtil.calculateBMI(178, 70));
    }
 
    static void work04UseOfObjectClass() {
@@ -98,11 +98,11 @@ public class Int101Homework01 {
           each method of "Person" and "BankAccount" objects.
       */
        Person nine = new Person(123);
-       Person karn = new Person(13);
+       Person karn = new Person(456);
+
        System.out.println(nine);
-       System.out.println(nine.getId());
        System.out.println(karn);
-       System.out.println(karn.getId();
+       System.out.println();
 
        BankAccount account = new BankAccount(nine.getId(), nine);
        BankAccount account1 = new BankAccount(karn.getId(), karn);
@@ -110,18 +110,28 @@ public class Int101Homework01 {
        System.out.println(account); 
        System.out.println(account.getOwner());
        System.out.println(account.getBalance());
-
+       System.out.println();
        System.out.println(account1); 
        System.out.println(account1.getOwner());
        System.out.println(account1.getBalance());
-        
-       account.deposit(1000);
-       System.out.println(account.getBalance());
 
-       account.withdraw(500);
+
+       System.out.println();
+
+       System.out.println("Deposit [1000] Balance: " + account.deposit(1000));
+
+       System.out.println("Withdraw [250] Balance: " + account.withdraw(250));
+
+       System.out.println("");
+       System.out.println("Balance before transfer: ");
        System.out.println(account.getBalance());
+       System.out.println(account1.getBalance());
+       System.out.println("");
 
        account.transfer(250, account1);
+
+
+       System.out.println("Balance after transfer:");
        System.out.println(account.getBalance());
        System.out.println(account1.getBalance());
    }
