@@ -13,9 +13,9 @@ public final class Utilitor {
     }
 
     public static long computeIsbn10(long isbn10) {
-        int sum = 0;f
+        int sum = 0;
 
-        while(isbn10 >= 0) {
+        for (int i=1; i<=9; i++) {
             long currentDigit = isbn10 % 10;
             sum += (int) (currentDigit * i);
             isbn10 /= 10;
